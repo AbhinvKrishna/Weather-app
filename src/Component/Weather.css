@@ -1,0 +1,10 @@
+.colgrad{
+    background-color: rgb(145, 222, 222);
+}
+
+input{
+    margin-left: 100px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    box-shadow: 10px;
+}
