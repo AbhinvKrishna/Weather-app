@@ -7,6 +7,7 @@ function Weather() {
      const[city, setCity] = useState(" ")
      const [temp, setTemp] = useState(0)
      const [name, setName] = useState("")
+     const [windspeed, setWindspeed] = useState("")
 
      useEffect(()=>{
 
@@ -17,6 +18,7 @@ function Weather() {
         console.log(data)
         setTemp(data.main.temp);
         setName(data.name)
+        setWindspeed(data.wind.speed)
 
       }
 
@@ -39,7 +41,8 @@ function Weather() {
     {search? (
       <div>
        <h5 className="card-title">{name}</h5>
-       <p className="card-text">The Temprature is :{temp}</p>
+       <p className="card-text">The Temprature is :{temp} 'F</p>
+       <p className="card-text">The Wind Speed is :{windspeed} m/s</p>
        </div>
     ):<p>Data Not Found, Sorry...</p>}
    
